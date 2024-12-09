@@ -1,0 +1,135 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  width: 1250px;
+  margin: 0;
+  padding: 0;
+  background-image: url('img/logo/image.png'); /* Ruta de la imagen de fondo */
+  background-position: center;
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: contain;
+  min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+  display: flex;
+  flex-direction: column; /* Apila los elementos de forma vertical */
+  justify-content: space-between; /* Se asegura de que los elementos estén distribuidos correctamente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Alinea todo el texto al centro */
+}
+
+/* Encabezado */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1% 3%; /* Ajuste proporcional */
+  width: 100%;
+  position: sticky;
+  top: 0;
+  
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px; /* Ajuste proporcional */
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Contenido principal */
+main {
+  padding: 3% 5%; /* Ajuste proporcional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Elimina la restricción de altura fija */
+  flex-grow: 1; /* Permite que el contenido crezca y ocupe el espacio restante */
+}
+
+/* Menú central */
+.menu-central {
+  position: relative;
+}
+
+.menu-titulo {
+  font-size: 3.2%; /* Tamaño del texto */
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 2% 5%; /* Ajuste proporcional */
+  border-radius: 0.4%;
+  cursor: pointer;
+}
+
+.menu-titulo:hover {
+  background-color: #222;
+}
+
+/* Menú desplegable */
+.menu-desplegable {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  padding: 1% 0;
+  border-radius: 0.4%;
+  box-shadow: 0 0.32% 0.48% rgba(0, 0, 0, 0.1);
+}
+
+.menu-desplegable li {
+  list-style: none;
+}
+
+.menu-desplegable li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 2% 5%; /* Ajuste proporcional */
+  display: block;
+}
+
+.menu-desplegable li a:hover {
+  background-color: #555;
+}
+
+/* Mostrar menú al pasar el ratón */
+.menu-central:hover .menu-desplegable {
+  display: block; /* Aparece el menú desplegable */
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1% 3%; /* Ajuste proporcional */
+  width: 100%;
+  position: relative;
+  margin-top: 1.6%; /* Ajuste para separación entre contenido */
+}

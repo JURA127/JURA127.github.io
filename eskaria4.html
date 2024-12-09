@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lea Artibai - Datos de tarjeta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.6%;
+        }
+        header h1 {
+            margin: 0;
+        }
+
+
+        nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8% 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+.container {
+            border: 1px solid #ccc;
+            padding: 1.6%;
+            max-width: 40%;
+            margin: 1.6% auto;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 1.6%;
+        }
+        form label {
+            display: block;
+            margin-bottom: 0.4%;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 0.64%;
+            margin-bottom: 1.2%;
+            border: 1px solid #ccc;
+            border-radius: 0..32%;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.96% 1.6%;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.056%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Metodo de Pago</h1>
+
+            <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="saskia.html">Cesta</a></li>
+        </ul>
+        </nav>
+      
+        
+    </header>
+    <div class="container">
+        <h2>Pedido</h2>
+        <form>
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="tipo">
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="amex">American Express</option>
+            </select>
+            
+            <label for="titular">Titular:</label>
+            <input type="text" id="titular" name="titular" placeholder="Nombre del titular" required>
+            
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" placeholder="Número de tarjeta" required>
+            
+            <label for="fecha">Fecha de expiración (MM/AA):</label>
+            <div style="display: flex; gap: 10px;">
+                <select id="mes" name="mes">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <!-- Añadir más meses -->
+                </select>
+                <select id="año" name="año">
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <!-- Añadir más años -->
+
+                </select>
+            </div>
+            
+            <label for="cvc">CVC:</label>
+            <input type="text" id="cvc" name="cvc" placeholder="Código de seguridad" required>
+            
+            <a href="eskaria5.html" class="btn">Enviar Pedido</a>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; Tienda de Arbitros 2024. Todos los derechos reservados.</p>
+      </footer>
+</body>
+</html>

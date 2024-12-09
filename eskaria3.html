@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eskaria3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.6%;
+        }
+        header h1 {
+            margin: 0;
+        }
+
+
+        nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8% 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+    
+.container {
+            border: 1px solid #ccc;
+            padding: 1.6%;
+            max-width: 40%;
+            margin: 1.6% auto;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 1.6%;
+        }
+        .payment-option {
+            margin-bottom: 1.2%;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            margin: 1px;
+            padding: 0.96% 1.6%;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.056%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Realizar Pedido</h1>
+
+            <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="saskia.html">Cesta</a></li>
+        </ul>
+        </nav>
+      
+        
+    </header>
+    <div class="container">
+        <h2>Pedido</h2>
+        <form>
+            <div class="payment-option">
+                <input type="radio" id="tarjeta" name="pago" value="tarjeta">
+                <label for="tarjeta">Tarjeta de crédito</label>
+            </div>
+            <div class="payment-option">
+                <input type="radio" id="paypal" name="pago" value="paypal">
+                <label for="paypal">PayPal</label>
+            </div>
+            <a href="eskaria4.html" class="btn">Siguiente</a>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; Tienda de Arbitros 2024. Todos los derechos reservados.</p>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silbatos Fox 40</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.6%;
+        }
+        header h1 {
+            margin: 0;
+        }
+        
+        nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8% 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 1.2%;
+        }
+        .category {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0.32% 0.64% rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 1.6%;
+            padding: 1.2%;
+            transition: transform 0.3s;
+        }
+        .category:hover {
+            transform: scale(1.05);
+        }
+        .category h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .product {
+            margin-bottom: 0.8%;
+            padding: 0.8%;
+            border-bottom: 1px solid #ddd;
+        }
+        .product:last-child {
+            border-bottom: none;
+        }
+        .product .name {
+            font-weight: bold;
+        }
+        .product .description {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.8% 1.6%;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 0.8%;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 0.8% 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+        <h1>Tarjetas</h1>
+
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="saskia.html">Cesta</a></li>
+            
+          </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Tarjetas -->
+        <div class="category">
+            <h2>Tarjetas</h2>
+            <div class="product">
+                <div class="name">Tarjetas</div>
+                <div class="description">Sirve Para Castigar A Los Jugadores.</div>
+                <a href="tarjeta.html" class="btn">Comprar</a>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; Tienda de Arbitros 2024. Todos los derechos reservados.</p>
+          </footer>
+
+    </body>
+    </html>
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denda - Saskia</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0;
+            bac
+                }
+        header {
+            background-color: #333;
+            color: white;
+          
+            text-align: center;
+            padding: 1.6%;
+        }
+        header h1 {
+            margin: 0;
+        }
+
+
+        nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8% 1.2%;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+        .cart-container {
+            margin-top: 1.6%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.6%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 0.8%;
+            text-align: left;
+        }
+        .delete-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.96% 1.6%;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .delete-btn:hover {
+            background-color: #45a049;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.96% 1.6%;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.056%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Cesta</h1>
+
+            <ul>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+        </nav>
+      
+        
+    </header>
+
+    <div class="cart-container">
+        <h2>Cesta</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Productos</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fox 40 Sonik Blast CMG Negro Y Blanco </td>
+                    <td>9,95 &euro;</td>
+                    <td>
+                        <input type="number" value="1" min="1" style="width: 50px;">
+                    </td>
+                    <td>9,95 &euro;</td>
+                    <td><button class="delete-btn">Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>Tarjeta Amarilla</td>
+                    <td>0,70 &euro;</td>
+                    <td>
+                        <input type="number" value="1" min="1" style="width: 50px;">
+                    </td>
+                    <td>0,70 &euro;</td>
+                    <td><button class="delete-btn">Eliminar</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: right;"><strong>Total</strong></td>
+                    <td colspan="2">10,65 &euro;</td>
+                </tr>
+            </tfoot>
+        </table>
+        <a href="eskaria.html" class="btn">Realizar Pedido</a>
+    </div>
+    <footer>
+        <p>&copy; Tienda de Arbitros 2024. Todos los derechos reservados.</p>
+      </footer>
+</body>
+</html>
