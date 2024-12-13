@@ -47,6 +47,50 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #555;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+  min-width: 160px;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block; /* Asegura que se despliegue con hover o focus */
+}
+
+.dropdown > a {
+  cursor: pointer; /* Para indicar que es interactivo */
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
 .container {
             border: 1px solid #ccc;
             padding: 1.6%;
@@ -89,20 +133,62 @@ nav ul li a:hover {
   bottom: 0;
   width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 1rem;
+            }
+
+            .form-container {
+                padding: 0 5%;
+            }
+
+           
+        }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .form-container {
+                padding: 0 3%;
+            }
+
+            
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <h1>Metodo de Pago</h1>
-
-            <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="saskia.html">Cesta</a></li>
-        </ul>
-        </nav>
+          <img width="130px" height="85px" src="img/logo/image(1).png" alt="logo">
+    
       
-        
+            <ul>
+              
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="eskaria.html">Usuario</a></li>
+              <li><div class="dropdown">
+                <a href="#accesorios">Accesorios</a>
+                <div class="dropdown-content">
+                  <a href="silbatosfox40.html">Silbatos Fox 40</a>
+                  <a href="relojes.html">Relojes</a>
+                  <a href="tarjetasportada.html">Tarjetas</a></li>
+              <li><a href="saskia.html">Cesta</a></li>
+      
+            
+          </ul>
+        </nav>
     </header>
     <div class="container">
         <h2>Pedido</h2>

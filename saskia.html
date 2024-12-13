@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0px;
             padding: 0;
-            bac
+            
                 }
         header {
             background-color: #333;
@@ -44,12 +44,52 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  padding: 0.8% 1.2%;
+  padding: 0.8% 15px;
   display: block;
 }
 
 nav ul li a:hover {
   background-color: #555;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+  min-width: 160px;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block; /* Asegura que se despliegue con hover o focus */
+}
+
+.dropdown > a {
+  cursor: pointer; /* Para indicar que es interactivo */
 }
 
         .cart-container {
@@ -105,14 +145,24 @@ nav ul li a:hover {
 <body>
     <header>
         <nav>
-            <h1>Cesta</h1>
+          <img width="130px" height="85px" src="img/logo/image(1).png" alt="logo">
 
-            <ul>
-            <li><a href="index.html">Inicio</a></li>
-        </ul>
-        </nav>
       
-        
+            <ul>
+              
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="eskaria.html">Usuario</a></li>
+              <li><div class="dropdown">
+                <a href="#accesorios">Accesorios</a>
+                <div class="dropdown-content">
+                  <a href="silbatosfox40.html">Silbatos Fox 40</a>
+                  <a href="relojes.html">Relojes</a>
+                  <a href="tarjetasportada.html">Tarjetas</a></li>
+              <li><a href="saskia.html">Cesta</a></li>
+      
+            
+          </ul>
+        </nav>
     </header>
 
     <div class="cart-container">
@@ -154,7 +204,7 @@ nav ul li a:hover {
                 </tr>
             </tfoot>
         </table>
-        <a href="eskaria.html" class="btn">Realizar Pedido</a>
+        <a href="eskaria.html" class="btn">Siguiente</a>
     </div>
     <footer>
         <p>&copy; Tienda de Arbitros 2024. Todos los derechos reservados.</p>
