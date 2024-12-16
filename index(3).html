@@ -4,36 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Árbitros</title>
-  <link rel="stylesheet" href="CSS/styles(3).css"> <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="CSS/styles.css"> <!-- Enlace al archivo CSS -->
 </head>
 <body>
   <header>
+    <!-- Aquí se agrega el logo -->
+    <img src="img/logo/image(1).png" alt="Logo"> <!-- Asegúrate de reemplazar esta ruta con la ubicación correcta de tu imagen -->
     <nav>
-      <img width="130px" height="85px" src="img/logo/image(1).png" alt="logo">
-      
-        
-        
-      
-       
-        
+        <!-- Menú hamburguesa -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" class="menu-toggle" id="menu-toggle">
+        <!-- Menú principal -->
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="eskaria.html">Usuario</a></li>
-          <li>
-            <div class="dropdown">
-              <a href="#accesorios">Accesorios</a>
-              <div class="dropdown-content">
-                <a href="silbatosfox40.html">Silbatos Fox 40</a>
-                <a href="relojes.html">Relojes</a>
-                <a href="tarjetasportada.html">Tarjetas</a>
-              </div>
-            </div>
-          </li>
-          <li><a href="saskia.html">Cesta</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="eskaria.html">Usuario</a></li>
+            <li class="dropdown">
+                <a href="#">Accesorios</a>
+                <div class="dropdown-content">
+                    <a href="silbatosfox40.html">Silbatos Fox 40</a>
+                    <a href="relojes.html">Relojes</a>
+                    <a href="tarjetasportada.html">Tarjetas</a>
+                </div>
+            </li>
+            <li><a href="saskia.html">Cesta</a></li>
         </ul>
-      </nav>
-    </header>
-  
+    </nav>
+</header>
 
 
   <!-- Contenido principal -->
@@ -66,7 +66,6 @@
        </div>
       </div>
 
-
       <div class="col-3 col-s-12">
         <div class="aside">
           <h2>Información</h2>
@@ -81,9 +80,10 @@
   <!-- Pie de página -->
   <footer>
     <p>&copy; Tienda de Árbitros 2024. Todos los derechos reservados.</p>
-    <p>Contacto</p>
-    <p>Telefono: 687 157 989</p>
-    <p>Email: tiendadearbitros@gmail.com</p>
+      <p>Contacto</p>
+      <p>Telefono: 687 157 989</p>
+      <p>Email: tiendadearbitros@gmail.com</p>
+    
   </footer>
 </body>
 </html>

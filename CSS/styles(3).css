@@ -12,7 +12,7 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   height: 100%; /* Asegura que html y body ocupen toda la altura disponible */
@@ -21,38 +21,30 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Fija el header y footer, el cuerpo es flexible */
   color: white; /* Cambia el color de la letra general en el cuerpo */
-  
 }
 
-
-
-
 header {
-    background-color: #00000062;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px
+  background-color: #00000062;
+  color: white;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Dos columnas: una para la imagen y otra para el contenido */
+  justify-items: end; /* Alinea el contenido del header a la derecha */
+  align-items: center;
+  padding: 10px 20px;
 }
 
 header img {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
-
-}
-
-
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Similar al header */
+  justify-items: end; /* Alinea el menú a la derecha */
   width: 100%;
 }
 
@@ -60,7 +52,9 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* Alinea los elementos en una fila */
+  gap: 10px;
 }
 
 nav ul li {
@@ -72,17 +66,12 @@ nav ul li a {
   color: rgb(255, 255, 255);
   padding: 10px 15px;
   display: block;
-
 }
 
 nav ul li a:hover {
   background-color: #555;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 .dropdown {
   position: relative;
 }
@@ -107,7 +96,6 @@ nav ul li a:hover {
 
 .dropdown-content a:hover {
   background-color: #555;
-  color: white;
 }
 
 .dropdown:hover .dropdown-content,
@@ -119,34 +107,20 @@ nav ul li a:hover {
   cursor: pointer; /* Para indicar que es interactivo */
 }
 
-a:hover{
-
+a:hover {
   color: rgb(255, 255, 255);
 }
 
-
-
-
 main {
-  flex-grow: 1px;
+  display: grid;
+  place-items: center; /* Centra el contenido dentro del main */
   padding: 3% 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  
 }
 
 .row::after {
   content: "";
   clear: both;
   display: table;
-}
-
-[class*="col-"] {
-  float: left;
-  ;
-  padding: 15px;
 }
 
 /* Responsive */
@@ -170,32 +144,25 @@ main {
 @media only screen and (min-width: 600px) {
   .col-s-3 { width: 25%; }
   .col-s-9 { width: 75%; }
- 
 }
 
 @media only screen and (min-width: 768px) {
   .col-3 { width: 25%; }
-  .col-6 { width: 50%; } 
-
+  .col-6 { width: 50%; }
 }
-
-
-  
-
-
 
 .btn {
-    display: inline-block;
-    background-color: #00000062;
-    color: rgb(255, 255, 255);
-    padding: 0.96% 1.6%;
-    text-decoration: none;
-    margin: 0.96%;
-    
-    font-size: 17px;
+  display: inline-block;
+  background-color: #00000062;
+  color: rgb(255, 255, 255);
+  padding: 0.96% 1.6%;
+  text-decoration: none;
+  margin: 0.96%;
+  font-size: 17px;
 }
+
 .btn:hover {
-    background-color: #adaaaa;
+  background-color: #adaaaa;
 }
 
 footer {
@@ -251,20 +218,20 @@ nav ul li {
 /* Mostrar menú hamburguesa en pantallas pequeñas */
 @media only screen and (max-width: 768px) {
   .hamburger {
-      display: flex;
+    display: flex;
   }
 
   nav ul {
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
 
   nav ul li a {
-      padding: 15px;
-      width: 100%;
-      display: block;
+    padding: 15px;
+    width: 100%;
+    display: block;
   }
 }
 
@@ -304,7 +271,6 @@ input[type="email"] {
   color: white;
   padding: 12px 20px;
   text-decoration: none;
- 
   font-size: 1rem;
   text-align: center;
 }
