@@ -4,183 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fox 40 Classic - Tienda</title>
+    <link rel="stylesheet" href="CSS/relojescontemporizadoresdecuentaregresiva.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1.6%;
-        }
-        header h1 {
-            margin: 0;
-        }
-        
-        nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 15px;
-  display: block;
-}
-
-nav ul li a:hover {
-  background-color: #555;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #000000;
-  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
-  min-width: 160px;
-  z-index: 10;
-}
-
-.dropdown-content a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  display: block;
-  padding: 10px 15px;
-}
-
-.dropdown-content a:hover {
-  background-color: #555;
-  color: white;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: block; /* Asegura que se despliegue con hover o focus */
-}
-
-.dropdown > a {
-  cursor: pointer; /* Para indicar que es interactivo */
-}
-
-
-        .description{
-            background-color: white;
-            padding: 1.6%;
-            border-radius: 0.64%;
-            box-shadow: 0 0.32% 0.64% rgba(0, 0, 0, 0.1);
-            width: 96.8%;
-            text-align: center;
-            
-        }
-        .product-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 1.6%;
-        }
-        .product-image{
-            max-width: 16%;
-            border-radius: 0.64%;
-            margin-right: 1.6%;
-        }
-        .product-details {
-            background-color: white;
-            padding: 1.6%;
-            border-radius: 0.64%;
-            box-shadow: 0 0.32% 0.64% rgba(0, 0, 0, 0.1);
-            width: 50%;
-        }
-        .product-details h2 {
-            color: #4CAF50;
-            margin-top: 0;
-        }
-        .product-details .price {
-            font-size: 1.5rem;
-            color: #4CAF50;
-            margin: 0.8% 0;
-        }
-        .product-details .description {
-            color: #555;
-            font-size: 1em;
-            margin-bottom: 1.6%;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 0.96% 1.6%;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        /* Pie de página */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 0.056%;
-  
-  bottom: 0;
-  width: 100%;
-}
-
+      
     
     </style>
 </head>
 <body>
 
    
-    <header>
-        <nav>
-          <img width="130px" height="85px" src="img/logo/image(1).png" alt="logo">
-    
-      
-            <ul>
-              
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="eskaria.html">Usuario</a></li>
-              <li><div class="dropdown">
-                <a href="#accesorios">Accesorios</a>
+  <header>
+    <!-- Aquí se agrega el logo -->
+    <img src="img/logo/image(1).png" alt="Logo"> <!-- Asegúrate de reemplazar esta ruta con la ubicación correcta de tu imagen -->
+    <nav>
+        <!-- Menú hamburguesa -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" class="menu-toggle" id="menu-toggle">
+        <!-- Menú principal -->
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="eskaria.html">Usuario</a></li>
+            <li class="dropdown">
+                <a href="#">Accesorios</a>
                 <div class="dropdown-content">
-                  <a  href="silbatosfox40.html">Silbatos Fox 40</a>
-                  <a style="background-color: red;"href="relojes.html">Relojes</a>
-                  <a href="tarjetasportada.html">Tarjetas</a></li>
-              <li><a href="saskia.html">Cesta</a></li>
-      
-            
-          </ul>
-        </nav>
-    </header>
+                    <a href="silbatosfox40.html">Silbatos Fox 40</a>
+                    <a href="relojes.html">Relojes</a>
+                    <a href="tarjetasportada.html">Tarjetas</a>
+                </div>
+            </li>
+            <li><a href="saskia.html">Cesta</a></li>
+        </ul>
+    </nav>
+</header>
+    
     
     
     <div class="description">
@@ -238,6 +98,9 @@ footer {
     </div>
     <footer>
         <p>&copy; Tienda de Arbitros 2024. Todos los derechos reservados.</p>
+        <p>Contacto</p>
+        <p>Telefono: 687 157 989</p>
+        <p>Email: tiendadearbitros@gmail.com</p>
       </footer>
 
 </body>

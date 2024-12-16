@@ -17,7 +17,7 @@ body{
   padding: 0;
   height: 100%; /* Asegura que html y body ocupen toda la altura disponible */
   font-family: Arial, sans-serif;
-  background-image: url('img/logo/arbitrotarjetaroja.jpg');
+  background-image: url('../img/logo/arbitrotarjetaroja.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,17 +32,19 @@ body{
 
 
 header {
-  color: rgb(255, 255, 255) !important; /* Cambia el color de la letra a rojo */
-  padding: 1% 3%;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background-color: #00000062;
+    background-color: #00000062;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px
 }
 
-header h1 {
-  margin: 0;
-  
+header img {
+    height: 100px;
+    width: 100px;
+}
+
 }
 
 
@@ -121,6 +123,8 @@ a:hover{
 
   color: rgb(255, 255, 255);
 }
+
+
 
 
 main {
@@ -203,3 +207,115 @@ footer {
   position: relative;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger span {
+  display: block;
+  background-color: white;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Ocultar el menú en pantallas pequeñas por defecto */
+nav ul {
+  display: flex;
+}
+
+.menu-toggle:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 0;
+  width: 80%;
+  background-color: #333;
+  z-index: 1000;
+}
+
+nav ul li {
+  width: 100%;
+  text-align: left;
+}
+
+/* Mostrar menú hamburguesa en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .hamburger {
+      display: flex;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  nav ul li a {
+      padding: 15px;
+      width: 100%;
+      display: block;
+  }
+}
+
+.form-container {
+  margin: 20px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00000062;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+ 
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #00000062;
+}
+
+footer {
+  background-color: #00000062;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
