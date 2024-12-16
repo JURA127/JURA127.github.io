@@ -47,7 +47,10 @@ header img {
 
 }
 
-
+h2{
+  border: dashed black 1px;
+  
+}
 
 nav {
   display: flex;
