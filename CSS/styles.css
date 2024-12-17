@@ -9,23 +9,25 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%; /* Asegura que html y body ocupen toda la altura disponible */
-  font-family: Arial, sans-serif;
+  
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Asegura que html y body ocupen toda la altura disponible */
+ 
   font-family: Arial, sans-serif;
   background-image: url('../img/logo/arbitrotarjetaroja.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white; /* Cambia el color de la letra general en el cuerpo */
 }
+
 
 header {
   background-color: #00000062;
@@ -221,12 +223,14 @@ nav ul li {
   text-align: left;
 }
 
+
+
 /* Mostrar menú hamburguesa en pantallas pequeñas */
 @media only screen and (max-width: 768px) {
   .hamburger {
     display: flex;
   }
-
+ 
   nav ul {
     display: none;
     flex-direction: column;
@@ -271,6 +275,10 @@ input[type="email"] {
   box-sizing: border-box;
 }
 
+.background-image{
+ background-size: cover;
+
+}
 .btn {
   display: inline-block;
   background-color: #00000062;
@@ -291,3 +299,4 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
