@@ -113,67 +113,6 @@ nav ul li {
     text-align: left;
 }
 
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 1.2%;
-}
-.category {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0.32% 0.64% rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-bottom: 1.6%;
-    padding: 1.2%;
-    transition: transform 0.3s;
-}
-.category:hover {
-    transform: scale(1.05);
-}
-.category h2 {
-    color: #4CAF50;
-    margin-top: 0;
-}
-.product {
-    margin-bottom: 0.8%;
-    padding: 0.8%;
-    border-bottom: 1px solid #ddd;
-}
-.product:last-child {
-    border-bottom: none;
-}
-.product .name {
-    font-weight: bold;
-}
-.product .description {
-    font-size: 0.9rem;
-    color: #555;
-}
-.btn {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.8% 1.6%;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 0.8%;
-}
-.btn:hover {
-    background-color: #45a049;
-}
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 0.8% 0;
-    
-    width: 100%;
-    bottom: 0;
-}
-
-
 /* Mostrar menú hamburguesa en pantallas pequeñas */
 @media only screen and (max-width: 768px) {
     .hamburger {

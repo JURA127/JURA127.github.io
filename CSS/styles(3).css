@@ -5,23 +5,31 @@
   padding: 0;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Asegura que html y body ocupen toda la altura disponible */
+}
+
 body {
   margin: 0;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
-  background-image: url('ruta-de-la-imagen.jpg'); /* Ruta de tu imagen */
-  background-size: cover; /* Hace que la imagen cubra toda el fondo */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene la imagen fija cuando se desplaza la página */
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../img/logo/arbitrotarjetaroja.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white; /* Cambia el color de la letra general en el cuerpo */
 }
 
 header {
   background-color: #00000062;
   color: white;
-  display: grid;
-  grid-template-columns: auto 1fr; /* Dos columnas: una para la imagen y otra para el contenido */
-  justify-items: end; /* Alinea el contenido del header a la derecha */
-  align-items: center;
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header img {
@@ -29,20 +37,23 @@ header img {
   width: 100px;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  flex: 1;
+}
+
 nav {
-  display: grid;
-  grid-template-columns: auto 1fr; /* Similar al header */
-  justify-items: end; /* Alinea el menú a la derecha */
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, auto); /* Alinea los elementos en una fila */
-  gap: 10px;
+  display: flex;
 }
 
 nav ul li {
@@ -68,7 +79,7 @@ nav ul li a:hover {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0; /* Alinea el contenido del dropdown a la derecha */
   background-color: #000000;
   box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
   min-width: 160px;
@@ -91,67 +102,52 @@ nav ul li a:hover {
   display: block; /* Asegura que se despliegue con hover o focus */
 }
 
-.dropdown > a {
-  cursor: pointer; /* Para indicar que es interactivo */
-}
-
 a:hover {
   color: rgb(255, 255, 255);
 }
 
 main {
   display: grid;
-  place-items: center; /* Centra el contenido dentro del main */
+  grid-template-columns: 1fr; /* Una sola columna por defecto */
+  gap: 15px; /* Espacio entre columnas y filas */
   padding: 3% 5%;
+  text-align: center; /* Opcional */
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.row {
+  display: contents; /* Útil para mantener la estructura en grid */
 }
 
-/* Responsive */
+/* Estilo general de las columnas */
 [class*="col-"] {
-  color: rgb(255, 255, 255);
-  width: 100%;
-}
-
-[class*="col-6"] {
+  padding: 15px;
+  box-sizing: border-box;
   color: white;
-  background-color: #00000062;
-  width: 100%;
+
 }
 
-[class*="aside"] {
-  color: white;
-  background-color: #00000062;
-  width: 100%;
+/* Estilos para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+  }
 }
 
-@media only screen and (min-width: 600px) {
-  .col-s-3 { width: 25%; }
-  .col-s-9 { width: 75%; }
+/* Estilos para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+  }
 }
 
-@media only screen and (min-width: 768px) {
-  .col-3 { width: 25%; }
-  .col-6 { width: 50%; }
+/* Estilos para pantallas grandes (PC) */
+@media only screen and (min-width: 769px) {
+  main {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en PC */
+  }
 }
 
-.btn {
-  display: inline-block;
-  background-color: #00000062;
-  color: rgb(255, 255, 255);
-  padding: 0.96% 1.6%;
-  text-decoration: none;
-  margin: 0.96%;
-  font-size: 17px;
-}
 
-.btn:hover {
-  background-color: #adaaaa;
-}
 
 footer {
   background-color: #00000062;
@@ -159,7 +155,6 @@ footer {
   text-align: center;
   padding: 1% 3%;
   width: 100%;
-  position: relative;
 }
 
 .hamburger {
@@ -203,6 +198,8 @@ nav ul li {
   text-align: left;
 }
 
+
+
 /* Mostrar menú hamburguesa en pantallas pequeñas */
 @media only screen and (max-width: 768px) {
   .hamburger {
@@ -211,8 +208,6 @@ nav ul li {
 
   nav ul {
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
     width: 100%;
   }
 
@@ -255,7 +250,7 @@ input[type="email"] {
 
 .btn {
   display: inline-block;
-  background-color: #00000062;
+  background-color: #0000;
   color: white;
   padding: 12px 20px;
   text-decoration: none;
@@ -263,17 +258,9 @@ input[type="email"] {
   text-align: center;
 }
 
-.btn:hover {
-  background-color: #00000062;
-}
-
 footer {
   background-color: #00000062;
   color: white;
   text-align: center;
   padding: 10px;
-}
-
-body image{
-  background-size: cover;
 }

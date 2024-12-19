@@ -114,11 +114,12 @@ nav ul li {
 }
 
 
-container {
+.container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 1.2%;
+    
 }
 .category {
     background-color: #fff;
@@ -127,17 +128,18 @@ container {
     width: 100%;
     margin-bottom: 1.6%;
     padding: 1.2%;
+
     transition: transform 0.3s;
 }
 .category:hover {
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 .category h2 {
     color: #4CAF50;
     margin-top: 0;
 }
 .product {
-    margin-bottom: 0.8%;
+    margin-bottom: 0.8%
     padding: 0.8%;
     border-bottom: 1px solid #ddd;
 }
