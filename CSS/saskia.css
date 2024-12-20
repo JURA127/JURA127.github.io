@@ -153,6 +153,7 @@ nav ul li {
     text-align: left;
 }
 
+
 /* Mostrar menú hamburguesa en pantallas pequeñas */
 @media only screen and (max-width: 768px) {
     .hamburger {
@@ -224,3 +225,19 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.delete-btn {
+    font-size: 0.8rem; /* Reducir el tamaño del texto */
+    padding: 8px 10px; /* Ajustar el relleno del botón */
+    width: auto; /* Botón ajusta su tamaño al contenido */
+    margin-bottom: 5px; /* Espacio reducido entre botones */
+}
+
+table, th, td {
+    font-size: 0.85rem; /* Reducir el texto de la tabla para dispositivos pequeños */
+}
+
+th, td {
+    padding: 8px; /* Reducir el espacio interno en celdas */
+}
+
