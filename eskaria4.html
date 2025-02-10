@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lea Artibai - Datos de tarjeta</title>
+    <link rel="stylesheet" href="CSS/eskaria4.css">
+    <style>
+  
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Aquí se agrega el logo -->
+        <img src="img/logo/image(1).png" alt="Logo"> <!-- Asegúrate de reemplazar esta ruta con la ubicación correcta de tu imagen -->
+        <nav>
+            <!-- Menú hamburguesa -->
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <!-- Menú principal -->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="eskaria.html">Usuario</a></li>
+                <li class="dropdown">
+                    <a href="#">Accesorios</a>
+                    <div class="dropdown-content">
+                        <a href="silbatosfox40.html">Silbatos Fox 40</a>
+                        <a href="relojes.html">Relojes</a>
+                        <a href="tarjetasportada.html">Tarjetas</a>
+                    </div>
+                </li>
+                <li><a href="saskia.html">Cesta</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Datos de tu tarjeta</h2>
+        <form>
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="tipo">
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="amex">American Express</option>
+            </select>
+            
+            <label for="titular">Titular:</label>
+            <input type="text" id="titular" name="titular" placeholder="Nombre del titular" required>
+            
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" placeholder="Número de tarjeta" required>
+            
+            <label for="fecha">Fecha de expiración (MM/AA):</label>
+            <div style="display: flex; gap: 10px;">
+                <select id="mes" name="mes">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <!-- Añadir más meses -->
+                </select>
+                <select id="año" name="año">
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <!-- Añadir más años -->
+
+                </select>
+            </div>
+            
+            <label for="cvc">CVC:</label>
+            <input type="text" id="cvc" name="cvc" placeholder="Código de seguridad" required>
+            
+            <a href="eskaria5.html" class="btn">Enviar Pedido</a>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; Tienda de Arbitros 2024. Todos los derechos reservados.</p>
+
+      </footer>
+</body>
+</html>

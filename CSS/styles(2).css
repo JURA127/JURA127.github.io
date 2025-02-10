@@ -1,0 +1,254 @@
+/* General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../img/logo/arbitrotarjetaroja.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+header {
+  background-color: #00000062;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 100px;
+  width: 100px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Asegura que los elementos estén en línea */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  flex-wrap: nowrap; /* Evita que los elementos se desborden o envuelvan */
+}
+
+nav ul li {
+  margin-right: 20px; /* Espacio entre los elementos */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #000000;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+  min-width: 160px;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+main {
+  padding: 4% 6%;
+  overflow: hidden;
+}
+
+.row {
+  display: block;
+}
+
+[class*="col-"] {
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  color: white;
+  width: calc(100% - 30px);
+  margin-bottom: 20px;
+  float: left;
+}
+
+@media only screen and (max-width: 600px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  [class*="col-"] {
+    width: calc(50% - 30px);
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  [class*="col-"] {
+    width: calc(33.33% - 30px);
+  }
+}
+
+footer {
+  background-color: #00000062;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px 30px;
+  width: 100%;
+  clear: both;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger span {
+  display: block;
+  background-color: white;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+
+.menu-toggle:checked ~ ul {
+  display: block;
+  background-color: #333;
+  width: 100%;
+}
+
+nav ul li {
+  width: 100%;
+  text-align: left;
+  clear: both;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    width: 100%;
+    display: block;
+  }
+}
+
+.form-container {
+  margin: 20px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0000;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer {
+  background-color: #00000062;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+}
