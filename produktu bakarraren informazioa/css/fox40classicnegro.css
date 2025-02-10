@@ -104,6 +104,21 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #555;
 }
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
 
 .dropdown-content {
     display: none;
