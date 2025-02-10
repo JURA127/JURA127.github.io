@@ -183,4 +183,5 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    position: fixed;
 }

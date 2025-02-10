@@ -46,6 +46,7 @@ display: block;
 }
 
 
+
 header {
     background-color: #333;
     color: white;
@@ -176,7 +177,9 @@ nav ul li {
     max-width: 16%;
     border-radius: 0.64%;
     margin-right: 1.6%;
+   
 }
+
 .product-details {
     background-color: white;
     padding: 1.6%;

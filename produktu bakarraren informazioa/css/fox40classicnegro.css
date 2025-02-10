@@ -1,0 +1,296 @@
+/* --- ESTILO GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Header que se queda en la parte superior */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 100px;
+    width: 100px;
+}
+
+.navbar {
+   position: relative;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+    min-width: 160px;
+    z-index: 1px;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav {
+    position: relative;
+}
+
+/* Estilo del menú principal (modo escritorio) */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+    min-width: 160px;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Estilos del menú hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger span {
+    display: block;
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    left: 0;
+    width: 80%;
+    background-color: #333;
+    z-index: 1000;
+}
+
+nav ul li {
+    width: 100%;
+    text-align: left;
+}
+
+/* Contenedor principal (centrado) */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    height: 80%;
+    max-width: 1200px;
+    margin-top: 100px;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: flex-start;
+}
+
+/* --- SECCIÓN IZQUIERDA (Imagen Principal) --- */
+.left {
+    flex: 2;
+    text-align: center;
+}
+
+.left img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --- SECCIÓN DERECHA (Imágenes pequeñas y precio) --- */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra las imágenes y el precio */
+    gap: 10px;
+    padding-left: 20px;
+}
+
+/* Cuadrícula para las imágenes (2 por 2) */
+.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Dos columnas de igual tamaño */
+    gap: 10px;
+    justify-items: center;  /* Centra las imágenes */
+}
+
+.images img {
+    width: 100px; /* Tamaño fijo para todas las imágenes */
+    height: 100px;
+    object-fit: cover; /* Mantiene proporción y corta lo que sobra */
+    border-radius: 5px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* --- RESPONSIVE PARA TABLETS Y MÓVILES --- */
+
+/* En tablets y pantallas más pequeñas (≤ 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+        flex-direction: column; /* Hace que las secciones se apilen verticalmente */
+        align-items: center;
+    }
+
+    .left img {
+        max-width: 250px;
+    }
+
+    .images img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* En móviles (≤ 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left img {
+        max-width: 250px;
+    }
+
+    .images img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+/* En pantallas muy pequeñas (≤ 480px) */
+@media (max-width: 480px) {
+    .images img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
